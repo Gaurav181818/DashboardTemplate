@@ -1,0 +1,114 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div class="main-container"> 
+    <!-- ============================================================== -->
+    <!-- Topbar - style you can find in header.scss -->
+    <!-- ============================================================== -->
+    <mat-toolbar color="primary" class="topbar telative">
+        <!-- ============================================================== -->
+        <!-- Logo - style you can find in header.scss -->
+        <!-- ============================================================== -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <!-- Logo icon --><b>
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    
+                    
+                </b>
+                <!--End Logo icon -->
+                <!-- Logo text -->
+                <span class="text-logo-icon" fxShow="false" fxShow.gt-xs>
+                 
+                 <!-- Light Logo text -->    
+                 <img src="assets\images\TecLogos Automation Pvt Ltd final file_2.png" class="light-logo" alt="homepage">
+                </span> </a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- sidebar toggle -->
+        <!-- ============================================================== -->
+        
+        <button mat-icon-button  (click)="snav.toggle()" value="sidebarclosed"  class="btn1">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <!-- ============================================================== -->
+        <!-- app header component - style you can find in header.scss / header.component.ts-->
+        <!-- ============================================================== -->
+        <app-header class="d-flex align-items-center ml-auto"></app-header>
+    </mat-toolbar>
+    <!-- ============================================================== -->
+    <!-- End Topbar - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+        <!-- ============================================================== -->
+        <!-- Sidebar - style you can find in sidebar.scss -->
+        <!-- ============================================================== -->
+        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"  >
+           
+                           <app-sidebar></app-sidebar>
+               
+                           <div class="wrapper">
+                            <nav id="sidebar">
+                                <ul class="lisst-unstyled components">
+                                    <li class="active">
+                                        <a href="#homeSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-house"></i>Home</a>
+                                        <ul class="collapse nav flex-column ms-1"  id="homeSubmenu"  data-bs-parent="#menu">
+                                            <li>
+                                               
+                                                <a href="#"> Home 1</a>
+
+                                            </li>
+                                            <li>
+                                                <a href="#">Home 2</a>
+                                                
+                                            </li>
+                                        </ul>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-regular fa-user"></i>Employees </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#pageSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-regular fa-pen-to-square"></i>Attendance</a>
+                                        <ul class="collapse nav flex-column ms-1" id="pageSubmenu" data-bs-parent="#menu">
+                                            <li>
+                                                <a href="#">Attendance Info</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Regularization & Permission</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-regular fa-file"></i>Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-regular fa-address-book"></i>Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                           </div>
+        </mat-sidenav>
+        <!-- ============================================================== -->
+        <!-- Sidebar - style you can find in sidebar.scss -->
+        <!-- ============================================================== -->
+        
+        <!-- ============================================================== -->
+        <!-- Page container - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <mat-sidenav-content class="page-wrapper">
+                 
+                <div class="page-content">
+                   
+                        <router-outlet><app-spinner></app-spinner></router-outlet>
+                    
+                </div>    
+               
+        </mat-sidenav-content>
+        <!-- ============================================================== -->
+        <!-- Page container - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+    </mat-sidenav-container>
+</div>

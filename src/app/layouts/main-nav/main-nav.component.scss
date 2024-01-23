@@ -1,0 +1,90 @@
+
+// .mat-expansion-panel-header {
+//     font-family: 'Montserrat', sans-serif; /* Change 'YourFont' to the desired font name */
+//     font-size: 16px; /* Adjust the font size as needed */
+//     font-weight: 400;/* Adjust the font weight as needed */
+//     /* Add any other font-related styles as needed */
+// } 
+
+  
+.btn1{
+    color: black;
+}
+a,
+a:hover,
+a:focus{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.wrapper{
+    // display: flex;
+    // text-decoration: none;
+    //  transition: all 0.3s;
+    justify-content: center;
+   
+}
+#sidebar ul.components{
+    padding: 20px 0;
+    font-family: "Montserrat" sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    list-style-type: none;
+    margin-left: 20px;
+
+}
+#sidebar ul p{
+    color: #fff;
+    padding: 10px;
+}
+#sidebar ul li a{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    box-sizing: content-box;
+    border-radius: 11px;
+    margin-right: 5px;
+
+    
+}
+#sidebar li{
+    list-style-type: none;
+}
+#sidebar ul li a:hover{
+    background-color: gray;
+    opacity: 50%;
+
+    
+}
+#sidebar ul li a:active{
+  
+    transform: scale(0.95);
+    
+}
+#sidebar ul a,a[aria-expanded="true"]{
+    color:black;
+    background: #fff;
+    
+}
+a[data-bs-toggle="collapse"]{
+    position: relative;
+}
+.dropdown-toggle::after{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important ;
+    
+}
+.lisst-unstyled.components li a i {
+    margin-right: 10px; 
+}
+
+
+
+
